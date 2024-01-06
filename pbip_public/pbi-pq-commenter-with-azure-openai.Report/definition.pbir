@@ -1,0 +1,9 @@
+{
+  "version": "1.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../pbi-pq-commenter-with-azure-openai.Dataset"
+    },
+    "byConnection": null
+  }
+}
