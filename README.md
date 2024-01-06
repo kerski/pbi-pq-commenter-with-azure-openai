@@ -23,7 +23,7 @@ Power BI Template that uses Azure Open AI to analyze the Power Query code in a s
 1. Identify the Workspace Connection for your workspace by following [these instructions](https://learn.microsoft.com/en-us/power-bi/enterprise/service-premium-connect-tools).  In workspace settings, it's at the bottom of the Premium tab (see Figure 1).
 
 ![Figure 1](./documentation/images/workspace-settings.png)
-** Figure 1 - Example of Server Settings URL (Workspace Connection).
+*Figure 1 - Example of Server Settings URL (Workspace Connection).*
 
 1. Open download the latest release of the template file.
 
@@ -42,6 +42,7 @@ Power BI Template that uses Azure Open AI to analyze the Power Query code in a s
 
 Press the load button when you have finished.
 
+<br/>
 4. You should be prompted to run a native database query (example in Figure 3). This is to run the dynamic management view queries to extract the Power Query Code. Select the "Run" option. *Note this may occur once or twice, so select the "Run" option in all cases.*
 
 #![Figure 3](./documentation/images/native-database-query.png)
