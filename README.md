@@ -98,7 +98,7 @@ If you want to have this run in the service, it's better to run this as a datafl
 ![Figure 7](./documentation/images/update-dataflow-parameters.png)
 <br/>*Figure 7 - Screenshot of paramters to update in the dataflow.*
 
-6. Click on the table labeled "Power Query Code". You should be prompted to allow Native Database Queries (example in Figure 9).  Select the "Continue" button.
+6. Click on the table labeled "Power Query Code". You should be prompted to allow Native Database Queries (example in Figure 8).  Select the "Continue" button.
 
 ![Figure 8](./documentation/images/dataflow-allow-native-connections.png)
 *Figure 8 - Screenshot to Allow Native Database Queries.*
@@ -115,7 +115,7 @@ If you want to have this run in the service, it's better to run this as a datafl
 
 9. Save the dataflow and refresh it.
 
-10. Capture the workspace ID and dataflow ID in your browser's URL (see Figure 9 as an example)
+10. Capture the workspace ID and dataflow ID in your browser's URL (see Figure 11 as an example)
 
 ![Figure 11](./documentation/images/workspace-and-dataflow-id.png)
 *Figure 11 - Example of Workspace and Dataflow ID in the URL.*
@@ -139,7 +139,7 @@ Press the load button when you have finished.
 
 ## Report Overview
 
-The report has 4 main features as identified in Figure 7.
+The report has 4 main features as identified in Figure 14.
 ![Figure 14](./documentation/images/report-overview.png)
 *Figure 14 - Screenshot of report with main features identified.*
 
