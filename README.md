@@ -96,7 +96,7 @@ If you want to have this run in the service, it's better to run this as a datafl
     - Azure_Open_API_Key - This can be also be retrieved during the deployment of the ChatGPT 4.0 model in [prerequisites](#prerequisities). **Please read the section on [security](#security) prior to sharing this file with anyone**.
 
 ![Figure 7](./documentation/images/update-dataflow-parameters.png)
-*Figure 7 - Screenshot of paramters to update in the dataflow.*
+<br/>*Figure 7 - Screenshot of paramters to update in the dataflow.*
 
 6. Click on the table labeled "Power Query Code". You should be prompted to allow Native Database Queries (example in Figure 9).  Select the "Continue" button.
 
