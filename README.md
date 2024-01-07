@@ -3,25 +3,36 @@ Power BI Template that uses Azure Open AI to analyze the Power Query code in a s
 
 #![Overview](./documentation/images/data-pipeline-overview.png)
 
-
 ***Important Note #1**: This guide is customized to Power BI for the Commercial environment.*
 
 ***Important Note #2**: This guide uses scripts that I built and tested on environments I have access to. Please review all scripts if you plan for production use, as you are ultimately responsible for the code that runs in your environment.*
 
-# Prerequisities
+## Table of Contents
 
-### Power BI
+1. [Installation](#installation)
+    1. [Prerequisites](#prerequisites)
+    1. [Install Desktop Version](#install-desktop-version)
+    1. [Install Dataflow Version](#install-dataflow-version)
+1. [Report Overview](#report-overview)
+1. [Security](#security)
+
+
+## Installation
+
+### Prerequisites
+
+#### Power BI
 -   Power BI Premium Per User, Premium, or Fabric workspace. If you do not have a Premium Per User license, use the "Buy Now" feature on <a href="https://docs.microsoft.com/en-us/power-bi/admin/service-premium-per-user-faq" target="_blank">Microsoft's site</a> or if you don't have access to do that, please contact your administrator (be nice!).
 
-### Desktop
+#### Desktop
 
 -   Power BI Desktop installed.
 
-### Azure OpenAI
+#### Azure OpenAI
 
 -   A ChatGPT 4.0 model deployed.  Instructions can be followed [at this link](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource?pivots=web-portal).
 
-## Installation Steps
+### Install Desktop Version
 
 1. Identify the Workspace Connection for your workspace by following [these instructions](https://learn.microsoft.com/en-us/power-bi/enterprise/service-premium-connect-tools).  In workspace settings, it's at the bottom of the Premium tab (see Figure 1).
 
@@ -65,27 +76,7 @@ Press the load button when you have finished.
 
 #![Figure 6](./documentation/images/report-example.png)
 
-
-## Report Overview
-
-The report has 4 main features as identified in Figure 7.
-#![Figure 7](./documentation/images/report-overview.png)
-
-1. Select Table - You can filter which table you wish to view the existing Power Query code and the comments or variables/applied steps renaming.
-
-2. Enhancement Options - You can choose between just seeing what ChatGPT has offered for comments or see comments and variable/applied steps renaming.
-
-3. This is the existing Power Query code for the selected table.
-
-4. This is the proposed changes provided by ChatGPT based on your selection in Enhancement Options.
-
-## Security
-
-I tried to provide this template as a low barrier to entry, so in this case the API Key is stored as a parameter.  Please make sure not to share your pbix or pbip implementation with other folks, nor provide them access to the parameters of the semantic model in the service if they shouldn't access that key.
-
-This is an issue with Web.Contents only allowing Anonymous connections with when issuing a POST HTTP Request to an API.  If you try to do [this approach](https://learn.microsoft.com/en-us/powerquery-m/web-contents#example-3) with Web.Contents  you'll get this error: "Web.Contents with the Content option is only supported when connecting anonymously".
-
-# Dataflow Version
+# Install Dataflow Version
 
 If you want to have this run in the service, it's better to run this as a dataflow to avoid any privacy and data combining issues.  To use the dataflow version please follow these steps:
 
@@ -144,3 +135,25 @@ Press the load button when you have finished.
 9. Once the refresh has completed you should see report.
 
 #![Figure 14](./documentation/images/report-example.png)
+
+
+## Report Overview
+
+The report has 4 main features as identified in Figure 7.
+#![Figure 7](./documentation/images/report-overview.png)
+
+1. Select Table - You can filter which table you wish to view the existing Power Query code and the comments or variables/applied steps renaming.
+
+2. Enhancement Options - You can choose between just seeing what ChatGPT has offered for comments or see comments and variable/applied steps renaming.
+
+3. This is the existing Power Query code for the selected table.
+
+4. This is the proposed changes provided by ChatGPT based on your selection in Enhancement Options.
+
+You can use the "Copy Value" option to copy the transformed Power Query code to your semantic model.  Please be sure to properly test your code.
+
+## Security
+
+I tried to provide this template as a low barrier to entry, so in this case the API Key is stored as a parameter.  Please make sure not to share your pbix or pbip implementation with other folks, nor provide them access to the parameters of the semantic model in the service if they shouldn't access that key.
+
+This is an issue with Web.Contents only allowing Anonymous connections with when issuing a POST HTTP Request to an API.  If you try to do [this approach](https://learn.microsoft.com/en-us/powerquery-m/web-contents#example-3) with Web.Contents  you'll get this error: "Web.Contents with the Content option is only supported when connecting anonymously".
