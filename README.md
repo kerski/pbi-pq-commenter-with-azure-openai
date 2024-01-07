@@ -44,12 +44,11 @@ Power BI Template that uses Azure Open AI to analyze the Power Query code in a s
 3. Open the template file.
 
 4.  You will be prompted to enter the following:
+    - Workspace Connection - This is retrieved in Step 1.
+    - Semantic Model Name - This is the name of the dataset/semantic model in the workspace.
+    -  Azure Open API URL - This can be retrieved during the deployment of the ChatGPT 4.0 model in the [prerequisites](#prerequisities). For example, if the name of my OpenAI instance is "ABC" and the ChatGPT deployment is named "XYZ" here is the sample URL: *https://XYZ.openai.azure.com/openai/deployments/ABC/chat/completions?api-version=2023-07-01-preview*
 
-- Workspace Connection - This is retrieved in Step 1.
-- Semantic Model Name - This is the name of the dataset/semantic model in the workspace.
--  Azure Open API URL - This can be retrieved during the deployment of the ChatGPT 4.0 model in the [prerequisites](#prerequisities). For example, if the name of my OpenAI instance is "ABC" and the ChatGPT deployment is named "XYZ" here is the sample URL: *https://XYZ.openai.azure.com/openai/deployments/ABC/chat/completions?api-version=2023-07-01-preview*
-
-- Azure Open API Key - This can be also be retrieved during the deployment of the ChatGPT 4.0 model in [prerequisites](#prerequisities). **Please read the section on [security](#security) prior to sharing this file with anyone**.
+    - Azure Open API Key - This can be also be retrieved during the deployment of the ChatGPT 4.0 model in [prerequisites](#prerequisities). **Please read the section on [security](#security) prior to sharing this file with anyone**.
 
 ![Figure 2](./documentation/images/template-popup.png)
 *Figure 2 - Template popup for parameters.*
@@ -75,6 +74,7 @@ Press the load button when you have finished.
 8. Once the refresh has completed you should see report.
 
 ![Figure 6](./documentation/images/report-example.png)
+*Figure 6 - Screenshot of loaded template.*
 
 # Install Dataflow Version
 
