@@ -120,9 +120,9 @@ If you want to have this run in the service, it's better to run this as a datafl
 ![Figure 11](./documentation/images/workspace-and-dataflow-id.png)
 *Figure 11 - Example of Workspace and Dataflow ID in the URL.*
 
-7. Download and open the latest report template labeled "pbi-pq-commenter-with-azure-openai-template-with-df.pbit"
+11. Download and open the latest report template labeled "pbi-pq-commenter-with-azure-openai-template-with-df.pbit"
 
-8. You will be prompted to enter the following:
+12. You will be prompted to enter the following:
 
 - Workspace_ID - This is retrieved in Step 10.
 - Dataflow_ID - This is retrieved in Step 10.
@@ -132,7 +132,7 @@ If you want to have this run in the service, it's better to run this as a datafl
 
 Press the load button when you have finished.
 
-9. Once the refresh has completed you should see report.
+13. Once the refresh has completed you should see report.
 
 ![Figure 13](./documentation/images/report-example.png)
 
