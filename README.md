@@ -52,7 +52,7 @@ Power BI Template that uses Azure Open AI to analyze the Power Query code in a s
 - Azure Open API Key - This can be also be retrieved during the deployment of the ChatGPT 4.0 model in [prerequisites](#prerequisities). **Please read the section on [security](#security) prior to sharing this file with anyone**.
 
 ![Figure 2](./documentation/images/template-popup.png)
-*Figure 2 - Template popup for parameters*
+*Figure 2 - Template popup for parameters.*
 
 Press the load button when you have finished.
 
@@ -60,17 +60,17 @@ Press the load button when you have finished.
 5. You should be prompted to run a native database query (example in Figure 3). This is to run the dynamic management view queries to extract the Power Query Code. Select the "Run" option. *Note this may occur once or twice, so select the "Run" option in all cases.*
 
 ![Figure 3](./documentation/images/native-database-query.png)
-*Figure 3 - Native Database Query screenshot*
+*Figure 3 - Native Database Query screenshot.*
 
 6. You will also be prompted to "Access SQL Server Analysis Services". This allows the template to query the dynamic management views in the Power BI Service. Login with your Microsoft account and select the "Connect" option.
 
 ![Figure 4](./documentation/images/pbi-auth.png)
-*Figure 4 - Access SQL Service Analysis Services screenshot*
+*Figure 4 - Access SQL Service Analysis Services screenshot.*
 
 7. You will be prompted "Access Web Contents".  This allows the template to query Azure OpenAI.  Select the Anonymous option and select the "Connect" button.
 
 ![Figure 5](./documentation/images/open-ai-auth.png)
-*Figure 5 - Access Web Contents screenshot*
+*Figure 5 - Access Web Contents screenshot.*
 
 8. Once the refresh has completed you should see report.
 
@@ -95,30 +95,30 @@ If you want to have this run in the service, it's better to run this as a datafl
     -  Azure_Open_API_URL - This can be retrieved during the deployment of the ChatGPT 4.0 model in the [prerequisites](#prerequisities). For example, if the name of my OpenAI instance is "ABC" and the ChatGPT deployment is named "XYZ" here is the sample URL: *https://XYZ.openai.azure.com/openai/deployments/ABC/chat/completions?api-version=2023-07-01-preview*
     - Azure_Open_API_Key - This can be also be retrieved during the deployment of the ChatGPT 4.0 model in [prerequisites](#prerequisities). **Please read the section on [security](#security) prior to sharing this file with anyone**.
 
-![Figure 8](./documentation/images/update-dataflow-parameters.png)
-*Figure 8 - Screenshot of paramters to update in the dataflow*
+![Figure 7](./documentation/images/update-dataflow-parameters.png)
+*Figure 7 - Screenshot of paramters to update in the dataflow.*
 
 6. Click on the table labeled "Power Query Code". You should be prompted to allow Native Database Queries (example in Figure 9).  Select the "Continue" button.
 
-![Figure 9](./documentation/images/dataflow-allow-native-connections.png)
-*Figure 9 - Screenshot to Allow Native Database Queries*
+![Figure 8](./documentation/images/dataflow-allow-native-connections.png)
+*Figure 8 - Screenshot to Allow Native Database Queries.*
 
 7. You then will be prompted to configure the connection for Analysis Services. This allows the template to query the dynamic management views in the Power BI Service. Select the "Configure Connection" button and login with your Microsoft account.
 
-![Figure 10](./documentation/images/df-ssas-connection.png)
-*Figure 10 - Screenshot to connect to Analysis Services*
+![Figure 9](./documentation/images/df-ssas-connection.png)
+*Figure 9 - Screenshot to connect to Analysis Services.*
 
 8. Click on the table labled "Power Query Code Transformed". You should be prompted to configure the Web Source connection. This allows the template to query Azure OpenAI.  Select the "Configure Connection" button and connect anonymously.
 
-![Figure 11](./documentation/images/df-web-connection.png)
-*Figure 11 - Screenshot to connect to Web source*
+![Figure 10](./documentation/images/df-web-connection.png)
+*Figure 10 - Screenshot to connect to Web source.*
 
 9. Save the dataflow and refresh it.
 
 10. Capture the workspace ID and dataflow ID in your browser's URL (see Figure 9 as an example)
 
-![Figure 12](./documentation/images/workspace-and-dataflow-id.png)
-*Figure 12 - Example of Workspace and Dataflow ID in the URL*
+![Figure 11](./documentation/images/workspace-and-dataflow-id.png)
+*Figure 11 - Example of Workspace and Dataflow ID in the URL.*
 
 7. Download and open the latest report template labeled "pbi-pq-commenter-with-azure-openai-template-with-df.pbit"
 
@@ -127,20 +127,21 @@ If you want to have this run in the service, it's better to run this as a datafl
 - Workspace_ID - This is retrieved in Step 10.
 - Dataflow_ID - This is retrieved in Step 10.
 
-![Figure 13](./documentation/images/df-template-popup.png)
-*Figure 13 - Template popup for parameters*
+![Figure 12](./documentation/images/df-template-popup.png)
+*Figure 12 - Template popup for parameters.*
 
 Press the load button when you have finished.
 
 9. Once the refresh has completed you should see report.
 
-![Figure 14](./documentation/images/report-example.png)
+![Figure 13](./documentation/images/report-example.png)
 
 
 ## Report Overview
 
 The report has 4 main features as identified in Figure 7.
-![Figure 7](./documentation/images/report-overview.png)
+![Figure 14](./documentation/images/report-overview.png)
+*Figure 14 - Screenshot of report with main features identified.*
 
 1. Select Table - You can filter which table you wish to view the existing Power Query code and the comments or variables/applied steps renaming.
 
