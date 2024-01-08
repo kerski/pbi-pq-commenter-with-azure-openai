@@ -281,7 +281,7 @@
           }
         ],
         "description": "The endpoint to the Azure OpenAI chat completions.",
-        "expression": "\"XYZ" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]",
+        "expression": "\"XYZ\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]",
         "kind": "m",
         "lineageTag": "c8b8297d-2e56-4125-84e4-91813653df7e",
         "queryGroup": "Parameters\\Azure Open AI"
